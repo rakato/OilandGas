@@ -6,6 +6,7 @@ require(gplots)
 library(magrittr)
 require(plotly)
 
+
 #Get first 9 month on the curve data from Quandl
 my_start_date <- "2013-01-05"
 
