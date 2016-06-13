@@ -1,5 +1,6 @@
+require(plyr)
 
-#prices heatmap
+#rbob crack heatmap
 
 dat<-data.frame(date=index(rb_crackset),rb_crackset)
 
