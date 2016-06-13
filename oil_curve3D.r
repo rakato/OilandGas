@@ -4,6 +4,7 @@ library(Quandl)
 library(TTR)
 require(gplots)
 library(magrittr)
+require(plotly)
 
 #Get first 9 month on the curve data from Quandl
 my_start_date <- "2013-01-05"
@@ -36,20 +37,21 @@ p <- merge(as.zoo(oil1a), as.zoo(oil2a), as.zoo(oil3a), as.zoo(oil4a),
 curve<- cbind("oil1a","oil2a","oil3a","oil4a","oil5a", "oil6a", "oil7a", "oil8a", "oil9a")
 names(curve)<-c("1st Month", "2nd Month", "3rd Month", "4th Month", "5th Month", "6th Month", "7th Month", "8th Month", "9th Month")
 
-p<-autoplot.zoo(p, facet=NULL)
+z<-autoplot.zoo(p, facet=NULL)
 
-ggplotly(z)
+ggplotly(p)
 
 
 p <- autoplot.zoo(z, main = "1st 9 Month WTI Curve", facets = NULL) + xlab("")+facet_free()
 ggplotly(p)
 
 #3d graph
-plot_ly(z = p, type = "surface")%>%
-  layout(title = "9 month WTI curve",
+plot_ly(y=index(p), z = p, x=index(month(p)), type = "surface", colors= "Blues")%>%
+  layout(title = "9 month Nat Gas curve",
          scene = list(
            xaxis = list(title = "Month"),
-           yaxis = list(title = "Days"),
+           yaxis = list(title = "Dates", tickangle = 90),
            zaxis = list(title = "Price")))
+
 
 
