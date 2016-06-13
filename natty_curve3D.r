@@ -45,12 +45,13 @@ p <- autoplot.zoo(z, main = "1st 9 Month Nat Gas Curve", facets = NULL) + xlab("
 ggplotly(p)
 
 #3d graph
-plot_ly(y=index(p), z = p, type = "surface", colors= "Oranges")%>%
+plot_ly(y=index(p), z = p, x=index(month(p)), type = "surface", colors= "Oranges")%>%
   layout(title = "9 month Nat Gas curve",
          scene = list(
            xaxis = list(title = "Month"),
-           yaxis = list(title = "Days",tickangle = 90),
+           yaxis = list(title = "Dates", tickangle = 90),
            zaxis = list(title = "Price")))
+
 
 
 
