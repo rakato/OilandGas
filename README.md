@@ -5,3 +5,7 @@ A number of commodity and equity visualizations using R and Plotly/JavaScript Li
 * 3D Historical 9-month nat gas curve
 * RBOB crack heatmap
 
+### Plots
+
+
+![rbob](rbobheatmap.png) 
