@@ -8,4 +8,4 @@ A number of commodity and equity visualizations using R and Plotly/JavaScript Li
 ### Plots
 
 
-![rbob](rbobheatmap.png) 
+![rbob](rbob_heatmap.png) 
