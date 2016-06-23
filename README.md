@@ -7,5 +7,6 @@ A number of commodity and equity visualizations using R and Plotly/JavaScript Li
 
 ### Plots
 
+##Rbob Crack Heatmap
 
 ![rbob](rbob_heatmap.png) 
