@@ -48,7 +48,7 @@ ggplotly(p)
 
 #3d graph
 plot_ly(y=index(p), z = p, x=index(month(p)), type = "surface", colors= "Blues")%>%
-  layout(title = "9 month Nat Gas curve",
+  layout(title = "9 month WTI Curve",
          scene = list(
            xaxis = list(title = "Month"),
            yaxis = list(title = "Dates", tickangle = 90),
