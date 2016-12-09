@@ -1,6 +1,21 @@
-require(dplyr)
 
 #rbob crack heatmap
+require(dplyr)
+require(Quandl)
+require(TTR)
+require(ggplot2)
+require(magrittr)
+
+#get rbob crack
+sdate<- "2013-01-05"
+rb_crack <- Quandl("CHRIS/CME_RM1", api_key="ncDqwnksVuYyCeMyJvYC", start_date = sdate, type = "xts")
+
+#get settle prices
+oilset <- oil[,"Settle"]
+gasset <- gas[,"Settle"]
+hoset<-ho[,"Settle"]
+rb_crackset<-rb_crack[,"Settle"]
+
 
 dat<-data.frame(date=index(rb_crackset),rb_crackset)
 
