@@ -2,7 +2,7 @@
 library(ggplot2)
 library(Quandl)
 library(TTR)
-require(gplots)
+library(gplots)
 library(magrittr)
 
 #Get first 9 month on the curve data from Quandl
